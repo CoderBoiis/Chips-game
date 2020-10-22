@@ -1,0 +1,1 @@
+print("Hello, this is the starting of our game, Chips. Hope you have fun")
