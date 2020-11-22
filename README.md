@@ -1,4 +1,5 @@
 # FriendsCoding
+(Written by whippingdot)
 This is for anyone I know who wants to do coding wit me.
 
 (Written by NRafa1391)
