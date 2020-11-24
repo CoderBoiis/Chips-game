@@ -14,60 +14,9 @@ struct player
     int numWins;
 };
 
-void getUserNames (string players[])
-{
-    cout << "Player 1, please enter your name: ";
-    cin >> players[0];
-    cout << "\nThanks and good luck!" << endl;
-    cout << "Player 2, please enter your name \n";
-    cout << "(If you wish to play against the computer, enter AI): ";
-    cin >> players[1];
-    cout << "\nThanks and good luck! \n";
-}
-
-string FindPlayerName(string names[], bool playerTurn)
-{
-	if (playerTurn == true)
-		return names[0];
-	else
-		return names[1];
-}
-
-int askMove(bool player1Turn, int chipsInPile, string names[])
-{
-	int chipsTaken;
-	int maxPerTurn = MAX_TURN * chipsInPile;
-	do
-    {
-  		cout << FindPlayerName(names, player1Turn) << " How many chips would  you like?\n";
-		
-    	cout << "You can take up to ";
-		if (( maxPerTurn ) == 0)
-		{
-			cout << " 1\n";
-		}
-		else
-		{
-			cout << maxPerTurn << endl;
-		}
-		if (FindPlayerName(names, player1Turn) == "AI")
-        {
-          	if (maxPerTurn == 0)
-          	{ 
-          		chipsTaken = 1;
-		  	}
-		  	else
-		  	{
-		  		chipsTaken = (rand() % maxPerTurn) + 1;
-			}
-		}
-		else
-		{
-    	    cin >> chipsTaken;
-	    }
-    }while ((chipsTaken > maxPerTurn )  && (chipsInPile > 1));
-    return chipsTaken;
-}
+void getUserNames(string players[]);
+string FindPlayerName(string names[], bool playerTurn);
+int askMove(bool player1Turn, int chipsInPile, string names[]);
 
 int main()
 {
@@ -140,4 +89,59 @@ int main()
     
     }while ( userChoice == 'Y');
     outFile.close();
+}
+
+void getUserNames(string players[])
+{
+    cout << "Player 1, please enter your name: ";
+    cin >> players[0];
+    cout << "\nThanks and good luck!" << endl;
+    cout << "Player 2, please enter your name \n";
+    cout << "(If you wish to play against the computer, enter AI): ";
+    cin >> players[1];
+    cout << "\nThanks and good luck! \n";
+}
+
+string FindPlayerName(string names[], bool playerTurn)
+{
+	if (playerTurn == true)
+		return names[0];
+	else
+		return names[1];
+}
+
+int askMove(bool player1Turn, int chipsInPile, string names[])
+{
+	int chipsTaken;
+	int maxPerTurn = MAX_TURN * chipsInPile;
+	do
+    {
+  		cout << FindPlayerName(names, player1Turn) << " How many chips would  you like?\n";
+		
+    	cout << "You can take up to ";
+		if (( maxPerTurn ) == 0)
+		{
+			cout << " 1\n";
+		}
+		else
+		{
+			cout << maxPerTurn << endl;
+		}
+		if (FindPlayerName(names, player1Turn) == "AI")
+        {
+          	if (maxPerTurn == 0)
+          	{ 
+          		chipsTaken = 1;
+		  	}
+		  	else
+		  	{
+		  		chipsTaken = (rand() % maxPerTurn) + 1;
+			}
+		}
+		else
+		{
+    	    cin >> chipsTaken;
+	    }
+    }while ((chipsTaken > maxPerTurn )  && (chipsInPile > 1));
+    return chipsTaken;
 }
