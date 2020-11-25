@@ -10,4 +10,4 @@ What you see is a series of files and folders with a little code in them. If you
 Hi guys.Im new
 
 ## *Project-Working Right Now*
-The project we are working on currently is the chips.py file which is on a game called chips. This is a game where two or more people play. They take up to half the chips in the pile(up to 100) per turn. Whoever takes the last chip loses. Check chips.cpp for how to create the game. That was made using the LinkedIn tutorial on C++. Do the code for this project in the chips branch.
+The project we are working on currently is the chips.py file which is on a game called chips. This is a game where two or more people play. They take up to half the chips in the pile(up to 100) per turn. Whoever takes the last chip loses. Check chips.cpp(which was made using a LinkedIn tutorial on C++) for how to create the game. Do the code for this project in the chips branch.
