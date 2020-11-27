@@ -86,7 +86,6 @@ int main()
             cout << player1.name << " had " << player1.numWins << " total wins this round" << endl;
             cout << player2.name << " had " << player2.numWins << " total wins this round" << endl;
         }
-    
     }while ( userChoice == 'Y');
     outFile.close();
 }
