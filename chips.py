@@ -9,8 +9,8 @@ def getUserNames(players):
   print("Thanks and good luck!")
 
 def FindPlayerName(names, playerTurn):
-  if playerTurn == True:
-    return names[0];
+  if playerTurn:
+    return names[0]
   else:
     return names[1]
 
