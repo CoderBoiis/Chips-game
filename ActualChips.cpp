@@ -3,7 +3,12 @@
 #include <cstdlib>
 #include <fstream>
 
-using namespace std; 
+using std::string;
+using std::ofstream;
+using std::cout;
+using std::cin;
+using std::ios;
+using std::endl;
 
 const float MAX_TURN = .5;
 const int MAX_CHIPS = 100;
